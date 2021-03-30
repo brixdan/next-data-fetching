@@ -11,7 +11,7 @@ export default function ServerSideRendered({ state }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('<YOUR_API>'); // like https://github.com/api
+  const res = await fetch('https://606300ac0133350017fd25e7.mockapi.io/my-api/my-res'); // like https://github.com/api
   const state = await res.json();
 
   return {

@@ -14,7 +14,7 @@ export default function IncrementalStaticGeneration({ state }) {
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps() {
-  const res = await fetch('<YOUR_API>'); // like https://github.com/api
+  const res = await fetch('https://606300ac0133350017fd25e7.mockapi.io/my-api/my-res'); // like https://github.com/api
   const state = await res.json();
 
   return {
@@ -25,6 +25,6 @@ export async function getStaticProps() {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    revalidate: 100, // In seconds
+    revalidate: 5, // In seconds
   };
 }
